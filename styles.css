@@ -88,20 +88,20 @@ button{ /*styling for both sign up buttons*/
 .header, .hero{/*CHILDREN OF HERO-CONTAINER but also flex containers themselves*/
     display: flex;/*assigns them as flex containers*/
     justify-content: space-between;/*pushes children to each side L& R as flex row*/
-    align-items: center; /*vertical alignment*/
+    align-items: stretch; /*vertical alignment*/
     width: 75%;
     padding-top: 10px;    
 }
 
 .hero{/*CHILD OF HERO-CONTAINER - independent hero styling below*/
-
+    
     margin: 60px 0;/*sets some spacing above and below*/
     gap: 25px; /*spaces out cat image from the text items on the left side*/
     flex-wrap: wrap;/*allows a bit of responsiveness when screen shrinks but need to look into this more*/
 }
 
-.hero-text, .cat{/*CHILDREN OF HERO */
-    flex:1; /*both children take up even space, stops text pushing image onto next line with wrap*/
+.hero-text{/*CHILD OF HERO */
+    flex:1 1 0; /*applied to hero-text not cat as image to stay same size and her-text accomodates changes*/
 }
 
 .header-links{
