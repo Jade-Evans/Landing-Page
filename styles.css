@@ -1,0 +1,184 @@
+/*********************COLOR & FONT STYLING************************************/
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: roboto;/*same font for all content*/
+    /*border: 1px solid red;*/
+}
+
+/*dark grey background*/
+.header,.footer,.hero-container{
+    background-color: #1F2937;
+}
+
+/*Hero "this...awesome" font styling*/
+.hero-main-text{
+    font-size: 48px;
+    color: #F9FAF8;
+    font-weight: 900;
+}
+
+/*Hero secondary text/header link/footer font styling*/
+.hero-sec-text, .header li,.footer{
+    font-size: 18px;
+    color:#E5E7EB;
+    padding-bottom: 6px;
+}
+
+.header-logo{
+    font-size: 24px;
+    color: #f9faf8;    
+}
+
+button{ /*styling for both sign up buttons*/
+    background-color: #3882F6;
+    padding: 4px 24px;
+    color:#E5E7EB;
+    border-radius: 8px;
+    border: 1px solid #E5E7EB;
+}
+
+/*styling to remove border on button in hero section only*/
+.hero-text button{
+    border:none;
+}
+
+.info-container h2{
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 900;
+    margin-top: 30px;
+
+}
+
+.quote-container{
+    background-color: #E5E7EB;
+    font-style: italic;
+    font-weight: lighter;
+    color:#1f2937;
+    font-size: 36px;
+       
+}
+.s3-Thor{
+    text-align: right;
+    font-weight: bold;
+}
+
+.cta-bluebox{
+    color: #E5E7EB;
+    background-color: #3882f6;
+    
+}
+
+/************************************LAYOUT*********************************/
+
+/*HEADER & HERO: SECTION 1*/
+
+
+.hero-container{/*centers the "hero" child within the middle of grey container with styling below*/
+    display: flex;
+    flex-direction: column;/*stacks the header on top of the hero section*/
+    justify-content: center;
+    align-items: center; 
+    width: 100%;      
+}
+
+.header, .hero{/*CHILDREN OF HERO-CONTAINER but also flex containers themselves*/
+    display: flex;/*assigns them as flex containers*/
+    justify-content: space-between;/*pushes children to each side L& R as flex row*/
+    align-items: center; /*vertical alignment*/
+    width: 75%;
+    padding-top: 10px;    
+}
+
+.hero{/*CHILD OF HERO-CONTAINER - independent hero styling below*/
+
+    margin: 60px 0;/*sets some spacing above and below*/
+    gap: 25px; /*spaces out cat image from the text items on the left side*/
+    flex-wrap: wrap;/*allows a bit of responsiveness when screen shrinks but need to look into this more*/
+}
+
+.hero-text, .cat{/*CHILDREN OF HERO */
+    flex:1; /*both children take up even space, stops text pushing image onto next line with wrap*/
+}
+
+.header-links{
+    list-style-type: none;/*removes bullets from ul*/
+    display: flex;/*aligns all the links*/
+    justify-content: space-evenly;
+    gap: 30px;
+}
+  
+/*INFORMATION: SECTION 2*/
+
+.info-container{
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    margin-bottom:80px;
+}
+
+.info-boxes-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;/*boxes will go onto next line if not enough space*/
+    flex:1;  
+}
+
+.s2-box{
+    display: flex;
+    flex-direction: column;
+    max-width: 170px;
+    align-items: center;
+    text-align: center;
+    flex:1;
+}
+
+.emptybox{
+    width: 150px;
+    height: 150px;
+    border: 2px solid blue;
+    border-radius: 6px;
+    margin: 20px;
+}
+
+/*QUOTE: SECTION 3*/
+
+.quote-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote{ 
+    width: 750px;
+    margin: 80px 0;
+}
+
+/*CALL TO ACTION: SECTION 4*/
+.cta-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.cta-bluebox{
+    width: 700px;
+    padding: 50px 70px;
+    display: flex;
+    justify-content: space-between;
+    margin:60px 0;
+    border-radius: 8px;
+}
+
+/*FOOTER*/
+.footer{
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
